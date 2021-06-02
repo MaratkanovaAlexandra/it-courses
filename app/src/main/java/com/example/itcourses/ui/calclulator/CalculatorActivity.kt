@@ -32,6 +32,8 @@ class CalculatorActivity : BaseActivity<CalculatorView, CalculatorPresenter>(), 
 
     private val buttonClear: Button by lazyUnsafe { findViewById(R.id.buttonClear) }
     private val buttonEqually: Button by lazyUnsafe { findViewById(R.id.buttonEqually) }
+    private val buttonDot: Button by lazyUnsafe { findViewById(R.id.buttonDot) }
+
 
     override fun initViews() {
         super.initViews()
@@ -50,6 +52,7 @@ class CalculatorActivity : BaseActivity<CalculatorView, CalculatorPresenter>(), 
         buttonSum.setOnClickListener { presenter.onSumClick() }
         buttonDiv.setOnClickListener { presenter.onDivClick() }
         buttonMult.setOnClickListener { presenter.onMultClick() }
+        buttonDot.setOnClickListener { presenter.onDotClick() }
 
         buttonClear.setOnClickListener { presenter.onClearClick() }
         buttonEqually.setOnClickListener { presenter.onEquallyClick() }
